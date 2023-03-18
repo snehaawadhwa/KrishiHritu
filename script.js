@@ -27,3 +27,14 @@ document.onload=()=>{
             document.querySelector('.header').classList.remove('active');
         }
 }
+
+jQuery(document).ready(function () {
+    
+    $('.card-button').click( function (e) {
+      var item = $(this).closest('.item');
+      item.children('.front').toggleClass('rotate');
+      item.children('.back').toggleClass('show');
+          e.preventDefault();
+    });
+      
+   })
